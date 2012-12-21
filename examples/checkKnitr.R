@@ -1,10 +1,11 @@
 source("../blog_options.R")
 source("blogr_functions.R")
 
-knit_hooks$get()
+post_options <- NA
 
 knit("test.Rmd", "tmp.md")
 
-knit_hooks$get()
+post_options
+
 
 sessionInfo()

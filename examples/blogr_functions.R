@@ -28,8 +28,14 @@ createPost <- function(all_options, filename){
 
 setHooks <- function(){
 	knit_hooks$set(post.options = function(before, options, envir){
-		cat("test result", file="hookOutput.txt")
-		
+		if (!before){
+			parentFrame <- sys.parent(n=4)
+			if(exists("post_options")){
+				assign("post_options", post_options, parentFrame)
+			}
+			
+		}
+			
 	})
 	
 	foo1 <- function(before, options, envir){
