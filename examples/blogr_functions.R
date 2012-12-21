@@ -23,7 +23,11 @@ createMain <- function(all_options){
 
 createPost <- function(all_options, filename){
   tmpKnit <- knit(filename, "tmp.md")
-  tmpKnit
+  tmpHTML <- markdownToHTML(tmpKnit)
+  
+  post_options <- NA
+  
+  knit("post_template.Rhtml")
 }
 
 setHooks <- function(){
