@@ -31,15 +31,11 @@ createPost <- function(all_options, filename){
   knit("post_template.Rhtml")
 }
 
-generateContent <- function(post_options){
-	
-}
-
 
 setHooks <- function(){
 	knit_hooks$set(post.options = function(before, options, envir){
 		if (!before){
-			parentFrame <- sys.parent(n=4)
+			parentFrame <- sys.frame(0)
 			if(exists("post_options")){
 				assign("post_options", post_options, parentFrame)
 			}
