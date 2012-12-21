@@ -1,0 +1,7 @@
+# simple test
+
+This is a simple test of an Rmd file to verify things work
+
+```{r inCode}
+1+1
+```
