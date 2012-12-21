@@ -14,3 +14,5 @@ other_options <- c(root="/",
 							 paginate=10,
 							 recent_posts=5,
 							 titlecase=TRUE)
+
+all_options <- c(blog_options, other_options)
