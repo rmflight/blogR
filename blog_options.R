@@ -1,4 +1,4 @@
-blog_options <- c(url="somesite.com",
+blog_options <- list(url="somesite.com",
 								 title="My test Blog",
 								 subtitle="whatever",
 								 author="some person",
@@ -9,7 +9,7 @@ blog_options <- c(url="somesite.com",
 								 public_directory="public")
 
 
-other_options <- c(root="/",
+other_options <- list(root="/",
 							 permalink="/blog:/year:/title",
 							 paginate=10,
 							 recent_posts=5,

@@ -2,12 +2,14 @@
 
 This is a simple test of an Rmd file to verify things work
 
-```{r inCode}
+```{r inCode, echo=FALSE, include=FALSE}
 setHooks()
 ```
 
-```{r makeOptions, post.options=TRUE}
-post_options <- c(title="test-post",
-									author="some guy",
-									date="2012-12-21|10:00|EST")
+```{r makeOptions, post.options=TRUE, echo=FALSE, include=FALSE}
+post_options <- list(title="test-post01",
+										 author="some guy",
+										 date="2012-12-21|10:00|EST",
+										 categories=c("test", "me", "out"))
 ```
+

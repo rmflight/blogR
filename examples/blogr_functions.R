@@ -22,13 +22,19 @@ createMain <- function(all_options){
 }
 
 createPost <- function(all_options, filename){
-  tmpKnit <- knit(filename, "tmp.md")
-  tmpHTML <- markdownToHTML(tmpKnit)
-  
-  post_options <- NA
+	post_options <- NA # set this to start
+	
+	tmpKnit <- knit(filename, "tmp.md")
+  tmpHTML <- markdownToHTML(tmpKnit, fragment.only=T)
+	post_options$content <- tmpHTML
   
   knit("post_template.Rhtml")
 }
+
+generateContent <- function(post_options){
+	
+}
+
 
 setHooks <- function(){
 	knit_hooks$set(post.options = function(before, options, envir){
