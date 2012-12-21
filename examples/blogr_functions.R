@@ -21,22 +21,24 @@ createMain <- function(all_options){
   
 }
 
-knit_hooks$set(post.options = function(before, options, envir){
-  cat("test result", file="hookOutput.txt")
-  
-})
-
-foo1 <- function(before, options, envir){
-  if (before) {
-    "_I appear before a chunk!_\n\n"
-  } else {
-    "\n\n_I am after a chunk..._"
-  }
-}
-
-knit_hooks$set(foo1 = foo1)
-
 createPost <- function(all_options, filename){
   tmpKnit <- knit(filename, "tmp.md")
   tmpKnit
+}
+
+setHooks <- function(){
+	knit_hooks$set(post.options = function(before, options, envir){
+		cat("test result", file="hookOutput.txt")
+		
+	})
+	
+	foo1 <- function(before, options, envir){
+		if (before) {
+			"_I appear before a chunk!_\n\n"
+		} else {
+			"\n\n_I am after a chunk..._"
+		}
+	}
+	
+	knit_hooks$set(foo1 = foo1)
 }

@@ -3,5 +3,13 @@
 This is a simple test of an Rmd file to verify things work
 
 ```{r inCode}
+setHooks()
+```
+
+```{r showHooks}
+knit_hooks$get()
+```
+
+```{r doCode, foo1=TRUE}
 1+1
 ```
