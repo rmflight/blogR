@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>
+  <!--begin.rcode genTitle, results='asis', echo=F
+    cat(post_options["title"])
+  end.rcode-->
+  </title>
+  </head>
+  <body>
+  
+  <div class="header">
+    <!--begin.rcode genHeader, results='asis', echo=F
+      createHeader(all_options)
+    end.rcode-->
+  </div>
+  
+  <div class="content">
+    <!--begin.rcode writeContent, results='asis', echo=F
+      postContent(post_options)
+    end.rcode-->
+  </div>
+  
+  <div class="author">
+    <!--begin.rcode writeContent, results='asis', echo=F
+      insertAuthor(post_options["author"])
+    end.rcode-->
+  </div>
+  
+  <div class="date">
+    <!--begin.rcode writeContent, results='asis', echo=F
+      insertDate(post_options["date"], all_options["date_format"])
+    end.rcode-->
+  </div>
+  
+  <div class="categories">
+    <!--begin.rcode writeContent, results='asis', echo=F
+      insertCategories(post_options["category"], all_options["date_format"])
+    end.rcode-->
+  </div>
+  
+  </body>
+</html>
