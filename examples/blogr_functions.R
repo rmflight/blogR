@@ -22,22 +22,25 @@ createMain <- function(all_options){
 }
 
 createPost <- function(all_options, filename){
-	post_options <- NA # set this to start
+	.post_options <- NA # set this to start
 	
 	tmpKnit <- knit(filename, "tmp.md")
   tmpHTML <- markdownToHTML(tmpKnit, fragment.only=T)
-	post_options$content <- tmpHTML
+	.post_options$content <- tmpHTML
   
   knit("post_template.Rhtml")
 }
 
+addAuthor <- function(inAuthor){
+  return(inAuthor)
+}
 
 setHooks <- function(){
 	knit_hooks$set(post.options = function(before, options, envir){
 		if (!before){
 			parentFrame <- sys.frame(0)
-			if(exists("post_options")){
-				assign("post_options", post_options, parentFrame)
+			if(exists(".post_options")){
+				assign(".post_options", post_options, parentFrame)
 			}
 			
 		}
