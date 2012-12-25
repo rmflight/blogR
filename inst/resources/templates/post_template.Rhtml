@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>
+  <!--begin.rcode genTitle, results='asis', echo=F
+    cat(.post_options[["title"]])
+  end.rcode-->
+  </title>
+  </head>
+  <body>
+  
+  <div class="header">
+    <!--begin.rcode genHeader, results='asis', echo=F
+      cat(createHeader(.all_options))
+    end.rcode-->
+  </div>
+  
+  <div class="content">
+    <!--begin.rcode writeContent, results='asis', echo=F
+      cat(.post_options[["content"]])
+    end.rcode-->
+  </div>
+  
+  <div class="author">
+    <!--begin.rcode addAuthor, results='asis', echo=F
+      cat(addAuthor(.post_options[["author"]]))
+    end.rcode-->
+  </div>
+  
+  
+  </body>
+</html>

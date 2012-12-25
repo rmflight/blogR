@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>
+  <!--begin.rcode genTitle, results='asis', echo=F
+    cat(all_options["title"])
+  end.rcode-->
+  </title>
+  </head>
+  <body>
+  
+  <div class="header">
+    <!--begin.rcode genHeader, results='asis', echo=F
+      createHeader(all_options)
+    end.rcode-->
+  </div>
+  
+  <div class="content">
+    <!--begin.rcode writeContent, results='asis', echo=F
+      createMainContent(all_options)
+    end.rcode-->
+  </div>
+  
+  <div class="footer">
+    <!--begin.rcode insertFooter, results='asis', echo=F
+      insertFooter(all_options)
+    end.rcode-->
+  
+  </body>
+</html>
