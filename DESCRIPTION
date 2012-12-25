@@ -1,0 +1,12 @@
+Package: blogR
+Version: 0.0.1
+Date: 2012-12-24
+Title: blogR
+Authors: c(person("Robert M Flight",
+                  "Developer",
+                  email = "...."))
+Author: Robert M Flight
+Maintainer: Robert M Flight <rflight79 at gmail.com>
+Description: Blogging using markdown, knitr, and R
+License: GPL (>= 2)
+Depends: knitr, markdown
