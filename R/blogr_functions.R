@@ -20,7 +20,8 @@ createHeader <- function(all_options){
 #' 
 #' Takes all_options and creates the index page of recent posts. The number of posts, and many
 #' other options should be set in the file _blog_options.R. This file will be sourced, and the
-#' options used in subsequent creation of the main index and individual posts.
+#' options used in subsequent creation of the main index and individual posts. This is just a bit
+#' of test comment
 createMain <- function(all_options){
   
 }
