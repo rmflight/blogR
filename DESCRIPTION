@@ -6,7 +6,7 @@ Authors: c(person("Robert M Flight",
                   "Developer",
                   email = "...."))
 Author: Robert M Flight
-Maintainer: Robert M Flight <rflight79 at gmail.com>
+Maintainer: Robert M Flight <rflight79@gmail.com>
 Description: Blogging using markdown, knitr, and R
 License: GPL (>= 2)
 Depends: knitr, markdown
