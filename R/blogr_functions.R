@@ -1,3 +1,14 @@
+#' Copy the folder structure over
+#' 
+#' Makes a copy of the blog folder structure in the stated directory
+#' 
+#' @param install_directory
+copyDirectory <- function(install_directory){
+  file_dir <- system.file("resources", "blogR")
+  print(file_dir)
+  #file.copy(file_dir, install_directory)
+}
+
 #' Create the header of the page
 #' 
 #' This function takes the full set of blog options, and uses that to create the header
