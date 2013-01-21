@@ -1,2 +1,5 @@
+export(copyDirectory)
+export(createHeader)
+export(createMain)
 export(createPost)
 export(setHooks)

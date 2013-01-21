@@ -2,11 +2,13 @@
 #' 
 #' Makes a copy of the blog folder structure in the stated directory
 #' 
-#' @param install_directory
+#' @param install_directory Where to put the files for the blog
+#' @export
 copyDirectory <- function(install_directory){
-  file_dir <- system.file("resources", "blogR")
-  print(file_dir)
-  #file.copy(file_dir, install_directory)
+  file_dir <- system.file(c("resources/_blog_options.R", "resources/site", "resources/templates"), package="blogR")
+  install_directory <- file.path(getwd(), install_directory)
+  dir.create(install_directory)
+  invisible(file.copy(file_dir, install_directory, recursive=T))
 }
 
 #' Create the header of the page
@@ -15,6 +17,7 @@ copyDirectory <- function(install_directory){
 #' that will be displayed on the main index page and each blog post page
 #' 
 #' @param all_options The full set of options. Will generally be .all_options
+#' @export
 createHeader <- function(all_options){
   head1 <- ""
   if (!(is.na(all_options["title"]))){
@@ -34,6 +37,7 @@ createHeader <- function(all_options){
 #' options used in subsequent creation of the main index and individual posts.
 #' 
 #' @param all_options The full set of options
+#' @export
 createMain <- function(all_options){
   
 }
