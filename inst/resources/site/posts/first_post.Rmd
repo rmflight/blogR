@@ -1,0 +1,22 @@
+```{r inCode, echo=FALSE, include=FALSE}
+# note that this and the next chunk should be included in every single Rmd file for blogging with blogR
+setHooks()
+```
+
+```{r makeOptions, post.options=TRUE, echo=FALSE, include=FALSE}
+.post_options <- list(title="first post",
+										 author="some guy",
+										 date="2012-12-21|10:00|EST",
+										 categories=c("test", "me", "out"))
+```
+
+# simple test
+
+This is a simple test of an Rmd file to verify things work
+
+## How about some code?
+
+```{r testBlock}
+1+1
+```
+
