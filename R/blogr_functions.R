@@ -5,7 +5,7 @@
 #' @param install_directory Where to put the files for the blog
 #' @export
 copyDirectory <- function(install_directory){
-  file_dir <- system.file(c("resources/_blog_options.R", "resources/site", "resources/templates"), package="blogR")
+  file_dir <- system.file(c("resources/_blog_options.R", "resources/site", "resources/templates", "resources/output"), package="blogR")
   install_directory <- file.path(getwd(), install_directory)
   dir.create(install_directory)
   invisible(file.copy(file_dir, install_directory, recursive=T))
@@ -45,7 +45,7 @@ createMain <- function(all_options){
 
 #' Create an individual post
 #' 
-#' Takes a supplied file \code{filename} and generates an html page based on a given template
+#' Takes a supplied file \code{filename} and generates an \code{html} page based on a given template
 #' 
 #' @param all_options the options for the blog generally
 #' @param filename the MD file to be processed to generate the individual post
