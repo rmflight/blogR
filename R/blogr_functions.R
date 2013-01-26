@@ -32,14 +32,18 @@ createHeader <- function(all_options){
 
 #' Create the index page of recent blog posts
 #' 
-#' Takes all_options and creates the index page of recent posts. The number of posts, and many
-#' other options should be set in the file _blog_options.R. This file will be sourced, and the
+#' Takes \code{all_options} and creates the index page of recent posts. The number of posts, and many
+#' other options should be set in the file \code{_blog_options.R}. This file will be sourced, and the
 #' options used in subsequent creation of the main index and individual posts.
 #' 
 #' @param all_options The full set of options
+#' @param site_directory The directory containing all of the content
 #' @export
-createMain <- function(all_options){
+createMain <- function(all_options, site_directory){
+  site_directory <- normalizePath(site_directory, mustWork=T)
   
+  post_directory <- file.path(site_directory, "posts")
+  post_files <- dir(post_directory)
 }
 
 
